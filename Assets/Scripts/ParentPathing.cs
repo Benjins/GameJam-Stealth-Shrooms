@@ -47,7 +47,6 @@ public class ParentPathing : MonoBehaviour {
 	public void GetRandomGoalNode(){
 		int index = Random.Range(0,nodes.Length);
 		pathingGoal = nodes[index];
-		Debug.Log("Random goal node: " + index);
 	}
 
 	public void RecalculatePath(){
@@ -56,28 +55,20 @@ public class ParentPathing : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-		Debug.Log("OnTriggerEnter()");
 		if((transform.position - immediateTarget).magnitude < 2){
-			Debug.Log("OnTriggerEnter(): close enough to target");
 			PathingNode node = col.gameObject.GetComponent<PathingNode>();
 			if(node != null){
-				Debug.Log("OnTriggerEnter with node.");
 				RecalculateCurrentNode();
 				if(node == pathingGoal){
-					Debug.Log("Reached goal");
 					GetRandomGoalNode();
 					RecalculatePath();
 					immediateTarget = pathingPoints.Pop();
 				}
 				else{
-					Debug.Log("Reached non-goal node");
 					RecalculateCurrentNode();
 					immediateTarget = pathingPoints.Pop();
 				}
 			}
-		}
-		else{
-			Debug.Log("transform.position: " + transform.position + "  immTarget: " + immediateTarget);
 		}
 	}
 }
