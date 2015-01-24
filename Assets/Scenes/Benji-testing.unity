@@ -174,11 +174,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neighbors:
   - {fileID: 1601902003}
-  - {fileID: 1009000204}
-  - {fileID: 1450187246}
   - {fileID: 1628887566}
+  - {fileID: 1450187246}
   - {fileID: 931070591}
+  - {fileID: 1009000204}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &97255952
 Transform:
   m_ObjectHideFlags: 0
@@ -191,6 +192,76 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1242984535}
   m_RootOrder: 8
+--- !u!1 &136240807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 136240811}
+  - 33: {fileID: 136240810}
+  - 136: {fileID: 136240809}
+  - 23: {fileID: 136240808}
+  m_Layer: 0
+  m_Name: VisionCone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &136240808
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136240807}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!136 &136240809
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136240807}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &136240810
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136240807}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &136240811
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136240807}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: 0, y: 0, z: .5}
+  m_LocalScale: {x: .5, y: .5, z: .5}
+  m_Children: []
+  m_Father: {fileID: 1016026223}
+  m_RootOrder: 0
 --- !u!1 &140560084
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +345,7 @@ GameObject:
   - 114: {fileID: 157547886}
   m_Layer: 0
   m_Name: First Person Controller
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,6 +608,7 @@ MonoBehaviour:
   - {fileID: 1624749829}
   - {fileID: 1891560224}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &197323698
 Transform:
   m_ObjectHideFlags: 0
@@ -594,6 +666,7 @@ MonoBehaviour:
   - {fileID: 1002827136}
   - {fileID: 1489195905}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &264497599
 Transform:
   m_ObjectHideFlags: 0
@@ -759,6 +832,10 @@ Prefab:
     - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
@@ -1075,6 +1152,7 @@ MonoBehaviour:
   - {fileID: 1002827136}
   - {fileID: 1612740776}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &921704688
 Transform:
   m_ObjectHideFlags: 0
@@ -1129,11 +1207,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neighbors:
   - {fileID: 1601902003}
-  - {fileID: 1009000204}
-  - {fileID: 1450187246}
   - {fileID: 1628887566}
+  - {fileID: 1450187246}
   - {fileID: 97255951}
+  - {fileID: 1009000204}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &931070592
 Transform:
   m_ObjectHideFlags: 0
@@ -1187,13 +1266,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - {fileID: 1624749829}
   - {fileID: 1953301220}
   - {fileID: 1309826859}
   - {fileID: 2081890387}
   - {fileID: 1601902003}
   - {fileID: 1450187246}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &977451068
 Transform:
   m_ObjectHideFlags: 0
@@ -1251,6 +1330,7 @@ MonoBehaviour:
   - {fileID: 264497598}
   - {fileID: 921704687}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1002827137
 Transform:
   m_ObjectHideFlags: 0
@@ -1309,6 +1389,7 @@ MonoBehaviour:
   - {fileID: 97255951}
   - {fileID: 931070591}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1009000205
 Transform:
   m_ObjectHideFlags: 0
@@ -1415,8 +1496,10 @@ GameObject:
   - 23: {fileID: 1016026220}
   - 114: {fileID: 1016026224}
   - 54: {fileID: 1016026225}
+  - 114: {fileID: 1016026226}
+  - 114: {fileID: 1016026227}
   m_Layer: 0
-  m_Name: 
+  m_Name: Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1470,7 +1553,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.5743332, y: 2.56303024, z: 3.86910963}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
+  m_Children:
+  - {fileID: 136240811}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!114 &1016026224
@@ -1479,7 +1563,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1016026219}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a40fe7bc68c8e4bb51cbe9ed73d7d1, type: 3}
   m_Name: 
@@ -1501,6 +1585,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1016026226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1016026219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c722722a809f844a14c31cd761913f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeTime: 2
+--- !u!114 &1016026227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1016026219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa820cfce9377d4885618d9d28db7b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sightDistance: 10
+  fieldOfView: 60
+  visionCone: {fileID: 0}
 --- !u!1 &1213333759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,9 +1761,10 @@ MonoBehaviour:
   - {fileID: 1953301220}
   - {fileID: 2081890387}
   - {fileID: 1601902003}
-  - {fileID: 977451067}
   - {fileID: 1450187246}
+  - {fileID: 977451067}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1309826860
 Transform:
   m_ObjectHideFlags: 0
@@ -1710,10 +1821,11 @@ MonoBehaviour:
   - {fileID: 1309826859}
   - {fileID: 2081890387}
   - {fileID: 1601902003}
-  - {fileID: 977451067}
   - {fileID: 97255951}
   - {fileID: 931070591}
+  - {fileID: 977451067}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1450187247
 Transform:
   m_ObjectHideFlags: 0
@@ -1775,6 +1887,7 @@ MonoBehaviour:
   - {fileID: 1309826859}
   - {fileID: 2081890387}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1489195906
 Transform:
   m_ObjectHideFlags: 0
@@ -1832,11 +1945,12 @@ MonoBehaviour:
   - {fileID: 1953301220}
   - {fileID: 1309826859}
   - {fileID: 2081890387}
-  - {fileID: 977451067}
   - {fileID: 1450187246}
   - {fileID: 97255951}
   - {fileID: 931070591}
+  - {fileID: 977451067}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1601902004
 Transform:
   m_ObjectHideFlags: 0
@@ -1891,9 +2005,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neighbors:
   - {fileID: 921704687}
-  - {fileID: 1009000204}
   - {fileID: 1628887566}
+  - {fileID: 1009000204}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1612740777
 Transform:
   m_ObjectHideFlags: 0
@@ -1955,8 +2070,8 @@ MonoBehaviour:
   - {fileID: 1309826859}
   - {fileID: 2081890387}
   - {fileID: 1601902003}
-  - {fileID: 977451067}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1624749830
 Transform:
   m_ObjectHideFlags: 0
@@ -2011,10 +2126,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neighbors:
   - {fileID: 1612740776}
-  - {fileID: 1009000204}
   - {fileID: 97255951}
   - {fileID: 931070591}
+  - {fileID: 1009000204}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1628887567
 Transform:
   m_ObjectHideFlags: 0
@@ -2072,6 +2188,7 @@ MonoBehaviour:
   - {fileID: 1624749829}
   - {fileID: 197323697}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1891560225
 Transform:
   m_ObjectHideFlags: 0
@@ -2192,6 +2309,7 @@ MonoBehaviour:
   - {fileID: 1891560224}
   - {fileID: 197323697}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1942302636
 Transform:
   m_ObjectHideFlags: 0
@@ -2252,6 +2370,7 @@ MonoBehaviour:
   - {fileID: 1601902003}
   - {fileID: 977451067}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &1953301221
 Transform:
   m_ObjectHideFlags: 0
@@ -2310,6 +2429,7 @@ MonoBehaviour:
   - {fileID: 921704687}
   - {fileID: 1489195905}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &2003805761
 Transform:
   m_ObjectHideFlags: 0
@@ -2368,9 +2488,10 @@ MonoBehaviour:
   - {fileID: 1953301220}
   - {fileID: 1309826859}
   - {fileID: 1601902003}
-  - {fileID: 977451067}
   - {fileID: 1450187246}
+  - {fileID: 977451067}
   sightRadius: 25
+  parentRadius: .5
 --- !u!4 &2081890388
 Transform:
   m_ObjectHideFlags: 0
