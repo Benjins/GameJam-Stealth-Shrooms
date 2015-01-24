@@ -20,15 +20,15 @@ public class TripVisualsUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		AddTripVisual();
-		AddTripVisual();
+		//AddTripVisual();
+		//AddTripVisual();
 		timeToNextTrip = Random.Range(tripTimeMin, tripTimeMax);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(tripLevel < minTripLevel){
-			//return;
+			return;
 		}
 
 		currentTime += Time.deltaTime;
