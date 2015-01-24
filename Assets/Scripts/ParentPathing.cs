@@ -28,6 +28,7 @@ public class ParentPathing : MonoBehaviour {
 		Quaternion goalRotation = Quaternion.LookRotation(goalDirection);
 		transform.rotation = Quaternion.RotateTowards(transform.rotation, goalRotation, rotationSpeed*Time.deltaTime);
 		transform.position += transform.forward * Time.deltaTime *speed;
+
 	}
 
 	public void RecalculateCurrentNode(){
