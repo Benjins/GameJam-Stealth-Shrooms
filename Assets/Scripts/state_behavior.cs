@@ -9,7 +9,6 @@ public class state_behavior : MonoBehaviour {
 	const float state_duration = 20.0f; // in seconds
 	object_state current_state; // current state
 
-
 	// Use this for initialization
 	void Start () {
 		this.current_state = this.starting_state;
