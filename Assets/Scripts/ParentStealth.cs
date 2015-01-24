@@ -20,7 +20,7 @@ public class ParentStealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float cosHalfFOVAngle = Mathf.Cos(fieldOfView/2*Mathf.Deg2Rad);
-		Vector3 newConeScale = new Vector3(cosHalfFOVAngle*2, sightDistance, cosHalfFOVAngle*2);
+		Vector3 newConeScale = new Vector3(cosHalfFOVAngle*5, sightDistance, cosHalfFOVAngle*5);
 		visionCone.transform.localScale = newConeScale;
 
 		transform.localScale = Vector3.one * 1;

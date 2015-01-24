@@ -29,7 +29,7 @@ public class DogAI : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-		if(col.gameObject == player){
+		if(col.tag == "Player"){
 			OnCaughtPlayer();
 		}
 	}
