@@ -12,6 +12,7 @@ public class MusicManager : MonoBehaviour {
 	void Awake(){
 		if(instance == null){
 			instance = this;
+			DontDestroyOnLoad(gameObject);
 		}
 
 		if(instance != this){
