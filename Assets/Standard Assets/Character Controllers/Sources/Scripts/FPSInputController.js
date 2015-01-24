@@ -1,8 +1,13 @@
 private var motor : CharacterMotor;
-public var difficulty = 0;
+public var WASDMode = 0;
+//private var manager : Trip_state_manager[] = FindObjectsOfType(Trip_state_manager) as Trip_state_manager[];
+//private var trip_level = Trip_state_manager[0].tripLevel;
+//public var manager = 0;
+
 // Use this for initialization
 function Awake () {
 	motor = GetComponent(CharacterMotor);
+	
 }
 
 // Update is called once per frame
@@ -11,13 +16,14 @@ function Update () {
 	var directionVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 	
 	// reverse horizontal
-	if (difficulty == 1) {
-		directionVector.x = directionVector.x * - 1;
-	} else if (difficulty == 2) {
+	if (WASDMode == 1) {
 		directionVector.z = directionVector.z * - 1;
-	} else if (difficulty == 3) {
-		directionVector.z = directionVector.z * - 1;
+	} else if (WASDMode == 2) {
 		directionVector.x = directionVector.x * - 1;
+	} else if (WASDMode == 3) {
+		var temp = directionVector.z;
+		directionVector.z = directionVector.x;
+		directionVector.x = temp * -1;
 	}
 		
 		

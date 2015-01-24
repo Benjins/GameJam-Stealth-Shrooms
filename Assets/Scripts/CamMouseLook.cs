@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 /// MouseLook rotates the transform based on the mouse delta.
@@ -14,25 +14,27 @@ using System.Collections;
 /// - Create a camera. Make the camera a child of the capsule. Reset it's transform.
 /// - Add a MouseLook script to the camera.
 ///   -> Set the mouse look to use LookY. (You want the camera to tilt up and down like a head. The character already turns.)
-[AddComponentMenu("Camera-Control/Mouse Look")]
-public class MouseLook : MonoBehaviour {
+//AddComponentMenu("Camera-Control/Mouse Look")]
+public class CamMouseLook : MonoBehaviour {
 	public float rotationZ = 0;
-
+	public Trip_state_manager manager;
+	
 	public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
 	public RotationAxes axes = RotationAxes.MouseXAndY;
 	public float sensitivityX = 15F;
 	public float sensitivityY = 15F;
-
+	
 	public float minimumX = -360F;
 	public float maximumX = 360F;
-
+	
 	public float minimumY = -60F;
 	public float maximumY = 60F;
-
+	
 	float rotationY = 0F;
-
+	
 	void Update ()
 	{
+		rotationZ = 40 * manager.tripLevel / 100;
 		float rotation_component = rotationZ * Mathf.Cos (Time.time) / 2;
 		if (axes == RotationAxes.MouseXAndY)
 		{
@@ -61,5 +63,8 @@ public class MouseLook : MonoBehaviour {
 		// Make the rigid body not change rotation
 		if (GetComponent<Rigidbody>())
 			GetComponent<Rigidbody>().freezeRotation = true;
+
+		//
+		manager = FindObjectOfType<Trip_state_manager> ();
 	}
 }
