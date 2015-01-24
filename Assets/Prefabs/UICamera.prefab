@@ -85,12 +85,13 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 97b050d43ac7c4d2b9f6cbb587650761, type: 3}
   - {fileID: 2800000, guid: 531c14f8d5cdc4e5baa83ee6e16f783a, type: 3}
   visualPrefab: {fileID: 100000, guid: 8e168077c1909554b8111b235e0372d6, type: 2}
-  tripTimeMin: 10
-  tripTimeMax: 20
+  tripTimeMin: 4
+  tripTimeMax: 8
   tripLevel: 0
   minTripLevel: 1
-  minTripSize: .300000012
-  maxTripSize: 2
+  maxTripLevel: 100
+  minTripSize: .5
+  maxTripSize: 3
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1

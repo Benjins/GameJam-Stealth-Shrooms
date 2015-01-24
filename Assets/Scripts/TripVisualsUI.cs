@@ -7,10 +7,11 @@ public class TripVisualsUI : MonoBehaviour {
 	public GameObject visualPrefab;
 
 	public float tripTimeMin = 10.0f;
-	public float tripTimeMax = 20.0f;
+	public float tripTimeMax = 30.0f;
 
 	public float tripLevel = 0.0f;
 	public float minTripLevel = 1.0f;
+	public float maxTripLevel = 100.0f;
 
 	public float minTripSize = 0.3f;
 	public float maxTripSize = 2.0f;
@@ -22,7 +23,8 @@ public class TripVisualsUI : MonoBehaviour {
 	void Start () {
 		//AddTripVisual();
 		//AddTripVisual();
-		timeToNextTrip = Random.Range(tripTimeMin, tripTimeMax);
+		float percentTripping = (tripLevel-minTripLevel)/(tripLevel-maxTripLevel);
+		timeToNextTrip = Mathf.Lerp(tripTimeMax,tripTimeMin,percentTripping);
 	}
 	
 	// Update is called once per frame
@@ -31,7 +33,8 @@ public class TripVisualsUI : MonoBehaviour {
 			return;
 		}
 
-		currentTime += Time.deltaTime;
+		float percentTripping = Mathf.Clamp01((tripLevel-minTripLevel)/(maxTripLevel - minTripLevel));
+		currentTime += Time.deltaTime * percentTripping; 
 		if(currentTime >= timeToNextTrip){
 			AddTripVisual();
 			timeToNextTrip = Random.Range(tripTimeMin, tripTimeMax);
