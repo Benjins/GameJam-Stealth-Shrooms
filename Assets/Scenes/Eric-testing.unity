@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ec2fe99d1108b9d0006a298d76c639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationZ: 45
+  rotationZ: 0
   axes: 2
   sensitivityX: 10
   sensitivityY: 3
@@ -259,11 +259,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 612798664}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f8a6735f91eab4cb8e6669c3ffbb53, type: 3}
+  m_Script: {fileID: 11500000, guid: b4f4f0638d5d14e74bf16bfa6572535c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FOV_pulse_rate: 1
+  FOV_pulse_range: 10
 --- !u!1 &845091669
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +622,7 @@ Prefab:
       objectReference: {fileID: 612798664}
     - target: {fileID: 11400006, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: rotationZ
-      value: 45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: rotationZ
