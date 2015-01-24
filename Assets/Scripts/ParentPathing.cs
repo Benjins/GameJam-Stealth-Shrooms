@@ -26,7 +26,7 @@ public class ParentPathing : MonoBehaviour {
 	void Update () {
 		Vector3 goalDirection = immediateTarget - transform.position;
 		Quaternion goalRotation = Quaternion.LookRotation(goalDirection);
-		transform.rotation = Quaternion.RotateTowards(transform.rotation, goalRotation, rotationSpeed);
+		transform.rotation = Quaternion.RotateTowards(transform.rotation, goalRotation, rotationSpeed*Time.deltaTime);
 		transform.position += transform.forward * Time.deltaTime *speed;
 	}
 
@@ -46,6 +46,9 @@ public class ParentPathing : MonoBehaviour {
 
 	public void GetRandomGoalNode(){
 		int index = Random.Range(0,nodes.Length);
+		if(nodes[index] == currentNode){
+			index = (index + 1) % nodes.Length;
+		}
 		pathingGoal = nodes[index];
 	}
 
