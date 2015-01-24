@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.06548882, y: 1.92157173, z: 9.60477352}
+  m_LocalPosition: {x: 1.06548882, y: 1.41759491, z: -46.8637123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -142,8 +142,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 2, z: 10}
-  m_Center: {x: 0, y: 0, z: 3}
+  m_Size: {x: 9.05000019, y: 2, z: 21.8199997}
+  m_Center: {x: 0, y: 0, z: 7.25}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,13 +155,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a253df75be8091f4698c7b4366d8539e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  rotationSpeed: 60
+  speed: 3
+  rotationSpeed: 80
   pathPoints:
-  - {x: -5.19999981, y: 1, z: 28}
-  - {x: 21, y: 1, z: 25.7800007}
-  - {x: 31.6000004, y: 1, z: 16.8299999}
-  - {x: -25.8999996, y: 1, z: 16.8299999}
+  - {x: -46, y: 1, z: -2.61999989}
+  - {x: 12, y: 1, z: -20.2000008}
+  - {x: 12, y: 1, z: -48.0999985}
+  - {x: -51.7000008, y: 1, z: -48}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
