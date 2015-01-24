@@ -11,7 +11,6 @@ public class state_behavior : MonoBehaviour {
 	const int visuals_start_intensity = 15;
 	object_state current_state; // current state
 
-
 	// Use this for initialization
 	void Start () {
 		this.current_state = this.starting_state;
