@@ -10,13 +10,11 @@ public class trip_object : MonoBehaviour {
 	public bool is_real;
 	[HideInInspector]
 	public float trip_level;
-	float sober_level;
 	bool in_trip;
 
 	// Use this for initialization
 	void Start () {
 		this.shared_time = 20f;
-		this.sober_level = 100f;
 		this.trip_level = 0f;
 		this.sober_time = shared_time; // sober object to start 
 		this.trip_time = 0;
@@ -29,7 +27,7 @@ public class trip_object : MonoBehaviour {
 	void Update () {
 		// get current trip level
 		// modify, trip time and sober time achordingly
-		if (this.trip_level >= this.visuals_start_level && !this.in_trip &&
+		if (this.trip_level >= visuals_start_level && !this.in_trip &&
 		    this.time_in_current_state >= this.sober_time) { 
 			int num = Random.Range(1,100);
 			if (this.trip_level > num) { 
