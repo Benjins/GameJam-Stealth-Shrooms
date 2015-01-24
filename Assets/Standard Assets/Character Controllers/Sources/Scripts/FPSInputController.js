@@ -1,5 +1,5 @@
 private var motor : CharacterMotor;
-
+public var difficulty = 0;
 // Use this for initialization
 function Awake () {
 	motor = GetComponent(CharacterMotor);
@@ -9,6 +9,18 @@ function Awake () {
 function Update () {
 	// Get the input vector from keyboard or analog stick
 	var directionVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+	
+	// reverse horizontal
+	if (difficulty == 1) {
+		directionVector.x = directionVector.x * - 1;
+	} else if (difficulty == 2) {
+		directionVector.z = directionVector.z * - 1;
+	} else if (difficulty == 3) {
+		directionVector.z = directionVector.z * - 1;
+		directionVector.x = directionVector.x * - 1;
+	}
+		
+		
 	
 	if (directionVector != Vector3.zero) {
 		// Get the length of the directon vector and then normalize it
@@ -31,6 +43,7 @@ function Update () {
 	motor.inputMoveDirection = transform.rotation * directionVector;
 	motor.inputJump = Input.GetButton("Jump");
 }
+
 
 // Require a character controller to be attached to the same game object
 @script RequireComponent (CharacterMotor)
