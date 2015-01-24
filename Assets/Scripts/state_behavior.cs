@@ -6,7 +6,9 @@ public enum object_state {visible_real, invisible_real, invisible_imaginary, vis
 public class state_behavior : MonoBehaviour {
 	public object_state starting_state; 
 	float elapsed_time; // seconds spent in current state
-	const float state_duration = 20.0f; // in seconds
+	float hallucination_durration = 2.0f; // in seconds
+	float sober_durration = 10.0f;
+	const int visuals_start_intensity = 15;
 	object_state current_state; // current state
 
 
@@ -28,31 +30,54 @@ public class state_behavior : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (this.elapsed_time >= state_duration) {
-			transition_state ();
-		}
-		if (this.current_state == object_state.visible_real || 
-		    	this.current_state == object_state.invisible_real) {
-			int trip_intensity = 0; // change later
-			int num = Random.Range(1,100);
-			if (num < trip_intensity) {
-				transition_state();
+		// transition to hallucination if you are tripping hard enough
+		// and sober state is over
+		if (is_hallucination() == false) {
+			int trip_intensity = 15; // change later
+			if (trip_intensity >= visuals_start_intensity && 
+			    this.elapsed_time >= this.sober_durration) {
+				int num = Random.Range(1,100);
+				if (trip_intensity > num) { 
+					start_hallucination (); 
+				} else { // stay in trip for a while longer
+					this.sober_durration += 0.05f; // stay sober for longer
+				}
 			}
+		} else if (this.elapsed_time >= this.hallucination_durration && is_hallucination()) {
+			stop_hallucination ();
 		}
 		this.elapsed_time += Time.deltaTime;
 	}
+
+
+	bool is_hallucination() {
+		if (this.current_state == object_state.visible_imaginary || 
+		    this.current_state == object_state.invisible_real) {
+				return true;
+		} else {
+			return false;
+		}
+	}
 	 
-	void transition_state() {
+	void stop_hallucination() {
 		this.elapsed_time = 0; // new state
-		if (this.current_state == object_state.visible_real) {
-			this.current_state = object_state.invisible_real; 
-		} else if (this.current_state == object_state.invisible_real) {
+		if (this.current_state == object_state.invisible_real) {
 			this.current_state = object_state.visible_real;
-		} else if (this.current_state == object_state.invisible_imaginary) {
-			this.current_state = object_state.visible_imaginary;
 		} else if (this.current_state == object_state.visible_imaginary) {
 			this.current_state = object_state.invisible_imaginary;
 		}
+		this.hallucination_durration += 4f; // so you hallucinate for longer next time
+		render_state ();
+	}
+
+	void start_hallucination() {
+		this.elapsed_time = 0; // new state
+		if (this.current_state == object_state.visible_real) {
+			this.current_state = object_state.invisible_real; 
+		} else if (this.current_state == object_state.invisible_imaginary) {
+			this.current_state = object_state.visible_imaginary;
+		}
+		this.sober_durration -= 1; // so your sober for a shorter time next
 		render_state ();
 	}
 
