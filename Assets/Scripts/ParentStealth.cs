@@ -29,8 +29,17 @@ public class ParentStealth : MonoBehaviour {
 		if(playerDirection.magnitude < sightDistance){
 			float playerDotProduct = Vector3.Dot(transform.forward, playerDirection.normalized);
 			if(playerDotProduct > cosHalfFOVAngle){
-				transform.localScale = Vector3.one * 2;
+				RaycastHit hit;
+				if(Physics.Raycast(transform.position, player.transform.position - transform.position, out hit)){
+					if(hit.collider.gameObject == player){
+						OnSeePlayer();
+					}
+				}
 			}
 		}
+	}
+
+	void OnSeePlayer(){
+		transform.localScale = Vector3.one * 2;
 	}
 }

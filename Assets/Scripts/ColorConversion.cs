@@ -4,19 +4,15 @@ using System.Collections;
 public class ColorConversion : MonoBehaviour {
 	
 	public float changeTime = 2.0f;
+	public bool changeColor = false;
 	//public float offset = 0.0f;
 
 	Color targetColor = Color.white;
 	bool changingColor = false;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-	
 	// Update is called once per frame
 	void Update () {
-		if(!changingColor){
+		if(!changingColor && changeColor){
 			float h = Random.value;
 			float s = Random.Range(0.6f,0.9f);
 			float v = Random.Range(0.6f,1.0f);

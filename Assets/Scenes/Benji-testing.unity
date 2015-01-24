@@ -74,6 +74,69 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1 &6849087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 6849089}
+  - 114: {fileID: 6849088}
+  - 65: {fileID: 6849090}
+  m_Layer: 0
+  m_Name: Node
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &6849088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6849087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285eb4953bf8c6b43aeaafb3edb932a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighbors:
+  - {fileID: 1942302635}
+  - {fileID: 1160371963}
+  - {fileID: 1375329367}
+  - {fileID: 1891560224}
+  - {fileID: 197323697}
+  - {fileID: 1624749829}
+  - {fileID: 1953301220}
+  - {fileID: 584364174}
+  sightRadius: 25
+  parentRadius: .5
+--- !u!4 &6849089
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6849087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.480093, y: -2.82910204, z: 5.26283932}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1242984535}
+  m_RootOrder: 24
+--- !u!65 &6849090
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6849087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .5, y: .5, z: .5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &17718207
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,8 +239,8 @@ MonoBehaviour:
   - {fileID: 1601902003}
   - {fileID: 1628887566}
   - {fileID: 1450187246}
-  - {fileID: 931070591}
   - {fileID: 1009000204}
+  - {fileID: 931070591}
   sightRadius: 25
   parentRadius: .5
 --- !u!4 &97255952
@@ -302,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 1
+  changeColor: 0
 --- !u!1 &157547884
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,10 +639,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
+  - {fileID: 6849088}
   - {fileID: 1942302635}
-  - {fileID: 1489195905}
-  - {fileID: 1624749829}
+  - {fileID: 1160371963}
+  - {fileID: 1375329367}
   - {fileID: 1891560224}
+  - {fileID: 1624749829}
+  - {fileID: 1634079955}
+  - {fileID: 584364174}
   sightRadius: 25
   parentRadius: .5
 --- !u!4 &197323698
@@ -697,6 +765,68 @@ Transform:
   - {fileID: 893295080}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &584364173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 584364175}
+  - 114: {fileID: 584364174}
+  - 65: {fileID: 584364176}
+  m_Layer: 0
+  m_Name: Node
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &584364174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584364173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285eb4953bf8c6b43aeaafb3edb932a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighbors:
+  - {fileID: 6849088}
+  - {fileID: 1942302635}
+  - {fileID: 1160371963}
+  - {fileID: 1375329367}
+  - {fileID: 1891560224}
+  - {fileID: 197323697}
+  - {fileID: 1634079955}
+  sightRadius: 25
+  parentRadius: .5
+--- !u!4 &584364175
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584364173}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.081218, y: -2.82910204, z: -5.26848173}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1242984535}
+  m_RootOrder: 21
+--- !u!65 &584364176
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584364173}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .5, y: .5, z: .5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &653410328
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 1
+  changeColor: 0
 --- !u!1001 &800910739
 Prefab:
   m_ObjectHideFlags: 0
@@ -909,6 +1040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 1
+  changeColor: 0
 --- !u!1 &828253586
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,6 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 1
+  changeColor: 0
 --- !u!1 &844837269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 2
+  changeColor: 0
 --- !u!1 &893295079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,6 +1290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 1
+  changeColor: 0
 --- !u!1 &921704686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,8 +1381,8 @@ MonoBehaviour:
   - {fileID: 1601902003}
   - {fileID: 1628887566}
   - {fileID: 1450187246}
-  - {fileID: 97255951}
   - {fileID: 1009000204}
+  - {fileID: 97255951}
   sightRadius: 25
   parentRadius: .5
 --- !u!4 &931070592
@@ -1533,6 +1668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 1
+  changeColor: 0
 --- !u!1 &1016026219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,6 +1783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 2
+  changeColor: 0
 --- !u!114 &1016026227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1661,6 +1798,70 @@ MonoBehaviour:
   sightDistance: 10
   fieldOfView: 60
   visionCone: {fileID: 136240807}
+--- !u!1 &1160371962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1160371964}
+  - 114: {fileID: 1160371963}
+  - 65: {fileID: 1160371965}
+  m_Layer: 0
+  m_Name: Node
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1160371963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160371962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285eb4953bf8c6b43aeaafb3edb932a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighbors:
+  - {fileID: 6849088}
+  - {fileID: 1942302635}
+  - {fileID: 1375329367}
+  - {fileID: 1891560224}
+  - {fileID: 197323697}
+  - {fileID: 1489195905}
+  - {fileID: 1624749829}
+  - {fileID: 1634079955}
+  - {fileID: 584364174}
+  sightRadius: 25
+  parentRadius: .5
+--- !u!4 &1160371964
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160371962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.701786, y: -2.82910204, z: -5.26848173}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1242984535}
+  m_RootOrder: 22
+--- !u!65 &1160371965
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160371962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .5, y: .5, z: .5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1213333759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,6 +1944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 1
+  changeColor: 0
 --- !u!1001 &1214302678
 Prefab:
   m_ObjectHideFlags: 0
@@ -1844,6 +2046,11 @@ Transform:
   - {fileID: 921704688}
   - {fileID: 1002827137}
   - {fileID: 2003805761}
+  - {fileID: 1634079956}
+  - {fileID: 584364175}
+  - {fileID: 1160371964}
+  - {fileID: 1375329368}
+  - {fileID: 6849089}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &1285655829
@@ -1954,8 +2161,8 @@ MonoBehaviour:
   - {fileID: 1953301220}
   - {fileID: 2081890387}
   - {fileID: 1601902003}
-  - {fileID: 1450187246}
   - {fileID: 977451067}
+  - {fileID: 1450187246}
   sightRadius: 25
   parentRadius: .5
 --- !u!4 &1309826860
@@ -1976,6 +2183,69 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1309826858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .5, y: .5, z: .5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1375329366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1375329368}
+  - 114: {fileID: 1375329367}
+  - 65: {fileID: 1375329369}
+  m_Layer: 0
+  m_Name: Node
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1375329367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375329366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285eb4953bf8c6b43aeaafb3edb932a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighbors:
+  - {fileID: 6849088}
+  - {fileID: 1942302635}
+  - {fileID: 1160371963}
+  - {fileID: 1891560224}
+  - {fileID: 197323697}
+  - {fileID: 1624749829}
+  - {fileID: 1634079955}
+  - {fileID: 584364174}
+  sightRadius: 25
+  parentRadius: .5
+--- !u!4 &1375329368
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375329366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.4070244, y: -2.82910204, z: 5.26283979}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1242984535}
+  m_RootOrder: 23
+--- !u!65 &1375329369
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375329366}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -2014,9 +2284,9 @@ MonoBehaviour:
   - {fileID: 1309826859}
   - {fileID: 2081890387}
   - {fileID: 1601902003}
+  - {fileID: 977451067}
   - {fileID: 97255951}
   - {fileID: 931070591}
-  - {fileID: 977451067}
   sightRadius: 25
   parentRadius: .5
 --- !u!4 &1450187247
@@ -2074,8 +2344,8 @@ MonoBehaviour:
   neighbors:
   - {fileID: 2003805760}
   - {fileID: 264497598}
+  - {fileID: 1160371963}
   - {fileID: 1624749829}
-  - {fileID: 197323697}
   - {fileID: 1953301220}
   - {fileID: 1309826859}
   - {fileID: 2081890387}
@@ -2138,10 +2408,10 @@ MonoBehaviour:
   - {fileID: 1953301220}
   - {fileID: 1309826859}
   - {fileID: 2081890387}
+  - {fileID: 977451067}
   - {fileID: 1450187246}
   - {fileID: 97255951}
   - {fileID: 931070591}
-  - {fileID: 977451067}
   sightRadius: 25
   parentRadius: .5
 --- !u!4 &1601902004
@@ -2255,10 +2525,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
+  - {fileID: 6849088}
   - {fileID: 1942302635}
-  - {fileID: 1489195905}
-  - {fileID: 1891560224}
+  - {fileID: 1160371963}
+  - {fileID: 1375329367}
   - {fileID: 197323697}
+  - {fileID: 1489195905}
   - {fileID: 1953301220}
   - {fileID: 1309826859}
   - {fileID: 2081890387}
@@ -2319,9 +2591,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neighbors:
   - {fileID: 1612740776}
+  - {fileID: 1009000204}
   - {fileID: 97255951}
   - {fileID: 931070591}
-  - {fileID: 1009000204}
   sightRadius: 25
   parentRadius: .5
 --- !u!4 &1628887567
@@ -2342,6 +2614,67 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1628887565}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .5, y: .5, z: .5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1634079954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1634079956}
+  - 114: {fileID: 1634079955}
+  - 65: {fileID: 1634079957}
+  m_Layer: 0
+  m_Name: Node
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1634079955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634079954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285eb4953bf8c6b43aeaafb3edb932a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighbors:
+  - {fileID: 1942302635}
+  - {fileID: 1160371963}
+  - {fileID: 1375329367}
+  - {fileID: 1891560224}
+  - {fileID: 197323697}
+  - {fileID: 584364174}
+  sightRadius: 25
+  parentRadius: .5
+--- !u!4 &1634079956
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634079954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.08121753, y: -2.82910204, z: 5.2540307}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1242984535}
+  m_RootOrder: 20
+--- !u!65 &1634079957
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634079954}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -2377,9 +2710,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
+  - {fileID: 6849088}
   - {fileID: 1942302635}
-  - {fileID: 1624749829}
+  - {fileID: 1160371963}
+  - {fileID: 1375329367}
   - {fileID: 197323697}
+  - {fileID: 1634079955}
+  - {fileID: 584364174}
   sightRadius: 25
   parentRadius: .5
 --- !u!4 &1891560225
@@ -2498,9 +2835,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
-  - {fileID: 1624749829}
+  - {fileID: 6849088}
+  - {fileID: 1160371963}
+  - {fileID: 1375329367}
   - {fileID: 1891560224}
   - {fileID: 197323697}
+  - {fileID: 1624749829}
+  - {fileID: 1634079955}
+  - {fileID: 584364174}
   sightRadius: 25
   parentRadius: .5
 --- !u!4 &1942302636
@@ -2556,6 +2898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbors:
+  - {fileID: 6849088}
   - {fileID: 1489195905}
   - {fileID: 1624749829}
   - {fileID: 1309826859}
@@ -2681,8 +3024,8 @@ MonoBehaviour:
   - {fileID: 1953301220}
   - {fileID: 1309826859}
   - {fileID: 1601902003}
-  - {fileID: 1450187246}
   - {fileID: 977451067}
+  - {fileID: 1450187246}
   sightRadius: 25
   parentRadius: .5
 --- !u!4 &2081890388
