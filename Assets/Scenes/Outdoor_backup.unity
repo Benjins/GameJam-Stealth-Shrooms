@@ -144,8 +144,6 @@ GameObject:
   - 23: {fileID: 18206398}
   - 114: {fileID: 18206397}
   - 114: {fileID: 18206395}
-  - 114: {fileID: 18206396}
-  - 65: {fileID: 18206400}
   m_Layer: 0
   m_Name: Scary Face Plane
   m_TagString: Untagged
@@ -181,23 +179,6 @@ MonoBehaviour:
   z: 0
   Pulsing: 1
   Pulse_rate: 40
---- !u!114 &18206396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 18206393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trip_time: 0
-  sober_time: 0
-  time_in_current_state: 0
-  is_real: 0
-  trip_level: 0
-  manager: {fileID: 0}
 --- !u!114 &18206397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,18 +227,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 18206393}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &18206400
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 18206393}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.0000057, y: 1.52349651e-06, z: 10.0000095}
-  m_Center: {x: -4.76837158e-07, y: 0, z: 2.98023224e-07}
 --- !u!1 &43711203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,8 +1134,6 @@ GameObject:
   - 23: {fileID: 417214842}
   - 114: {fileID: 417214841}
   - 114: {fileID: 417214845}
-  - 114: {fileID: 417214846}
-  - 65: {fileID: 417214847}
   m_Layer: 0
   m_Name: Sphere_01
   m_TagString: Untagged
@@ -1271,35 +1238,6 @@ MonoBehaviour:
   z: 0
   Pulsing: 0
   Pulse_rate: 0
---- !u!114 &417214846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 417214840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trip_time: 0
-  sober_time: 0
-  time_in_current_state: 0
-  is_real: 0
-  trip_level: 0
-  manager: {fileID: 0}
---- !u!65 &417214847
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 417214840}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.00000012, y: 1, z: 1.00000012}
-  m_Center: {x: 5.96046448e-08, y: 0, z: -8.94069672e-08}
 --- !u!1 &444833045
 GameObject:
   m_ObjectHideFlags: 0
@@ -8353,7 +8291,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b17a4b2b2578ebf419768569bf22594a, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: b17a4b2b2578ebf419768569bf22594a, type: 2}
       propertyPath: orthographic size
@@ -8447,8 +8385,6 @@ GameObject:
   - 23: {fileID: 1945601275}
   - 114: {fileID: 1945601274}
   - 114: {fileID: 1945601272}
-  - 114: {fileID: 1945601273}
-  - 65: {fileID: 1945601278}
   m_Layer: 0
   m_Name: Unicorn plane
   m_TagString: Untagged
@@ -8472,23 +8408,6 @@ MonoBehaviour:
   z: 0
   Pulsing: 0
   Pulse_rate: 0
---- !u!114 &1945601273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1945601271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trip_time: 0
-  sober_time: 0
-  time_in_current_state: 0
-  is_real: 0
-  trip_level: 0
-  manager: {fileID: 0}
 --- !u!114 &1945601274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8550,18 +8469,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1518942169}
   m_RootOrder: 1
---- !u!65 &1945601278
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1945601271}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 2.74491327e-07, z: 10}
-  m_Center: {x: -4.76837158e-07, y: -4.76837158e-07, z: 4.76837158e-07}
 --- !u!1 &1953035953
 GameObject:
   m_ObjectHideFlags: 0
