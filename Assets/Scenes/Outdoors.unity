@@ -931,13 +931,15 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 612798665}
-  - 20: {fileID: 612798670}
+  - 224: {fileID: 612798673}
   - 92: {fileID: 612798669}
   - 124: {fileID: 612798668}
   - 114: {fileID: 612798667}
   - 81: {fileID: 612798666}
   - 114: {fileID: 612798671}
+  - 222: {fileID: 612798672}
+  - 20: {fileID: 612798670}
+  - 114: {fileID: 612798665}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -945,18 +947,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &612798665
-Transform:
+--- !u!114 &612798665
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 612798664}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .907083511, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2011885024}
-  m_RootOrder: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47e794ad06b6b247b62d5c55e5b7074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLeft: 300
+  min: 0
+  sec: 0
 --- !u!81 &612798666
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1054,6 +1058,29 @@ MonoBehaviour:
   maximumX: 360
   minimumY: -60
   maximumY: 60
+--- !u!222 &612798672
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 612798664}
+--- !u!224 &612798673
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 612798664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2011885024}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: .907083511}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1 &630502818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4947,7 +4974,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2015486381}
-  - {fileID: 612798665}
+  - {fileID: 612798673}
   - {fileID: 1691623227}
   m_Father: {fileID: 0}
   m_RootOrder: 3
