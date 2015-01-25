@@ -3,7 +3,7 @@ using System.Collections;
 
 public class trip_object : MonoBehaviour {
 	const float visuals_start_level = 15;
-	float shared_time = Random.Range(8, 30); 
+	float shared_time;// = Random.Range(8, 30); 
 	public float trip_time;   
 	public float sober_time;
 	public float time_in_current_state;
@@ -17,9 +17,10 @@ public class trip_object : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		manager = FindObjectOfType<Trip_state_manager> ();
+		shared_time = Random.Range (8, 20);
 		this.trip_level = 0f;
 		this.sober_time = shared_time; //- Random.Range(1, 5); // sober object to start 
-		this.trip_time = 0;
+		this.trip_time = Random.Range (2,10);
 		this.in_trip = false;
 		this.time_in_current_state = 0; // just started, sober
 		this.collider.enabled = this.is_real; // if the obj is real, you can run into it
