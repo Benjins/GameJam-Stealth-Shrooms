@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -100, z: 0}
+  m_LocalPosition: {x: 0, y: -126.377342, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,9 +82,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visuals:
-  - {fileID: 2800000, guid: 97b050d43ac7c4d2b9f6cbb587650761, type: 3}
-  - {fileID: 2800000, guid: 531c14f8d5cdc4e5baa83ee6e16f783a, type: 3}
-  visualPrefab: {fileID: 100000, guid: 8e168077c1909554b8111b235e0372d6, type: 2}
+  - {fileID: 111566, guid: 4d8f773fca851453baf1e935fced864f, type: 2}
+  - {fileID: 139664, guid: 6ec4c6ee266de45ecb9d3dd2b9e3f22e, type: 2}
+  - {fileID: 106144, guid: d8661bd636e2e4e80b05179d05f3b00e, type: 2}
+  - {fileID: 148570, guid: 9b44005a464f1454fadfeb2e68077a2e, type: 2}
+  - {fileID: 116102, guid: d4ce4af28784641569dffbcc9ca81294, type: 2}
+  - {fileID: 101760, guid: 088e58438abbf482f9c845690082f2fb, type: 2}
+  - {fileID: 115220, guid: 31f6cdc36c54243668e168a4ef30434d, type: 2}
+  - {fileID: 184582, guid: 439fca377c98d4cb7a9601d53945cca9, type: 2}
+  - {fileID: 185480, guid: 0c23e89b1fd5143c3be880246d732285, type: 2}
+  - {fileID: 189630, guid: 66f43be2e0ee643ae913bb65ad12a1e2, type: 2}
+  - {fileID: 187052, guid: 20db9d8bf11db4b8995631dce2c636c1, type: 2}
+  - {fileID: 111584, guid: b8cde4eafc8fc41cc881ab734d24a055, type: 2}
+  - {fileID: 177066, guid: f30c7301da6534f0085fd1729d770413, type: 2}
+  - {fileID: 159314, guid: 6fb6d97f3ca774d2ead4afaf058de631, type: 2}
   tripTimeMin: 4
   tripTimeMax: 8
   tripLevel: 0

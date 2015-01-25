@@ -35,7 +35,9 @@ public class DogAI : MonoBehaviour {
 	}
 
 	void OnCaughtPlayer(){
-		Debug.Log("The dog caught the player.");
+		if(Time.timeScale > 0){
+			GameOverScreen.instance.SetUI(true);
+		}
 	}
 
 	void OnDrawGizmos(){

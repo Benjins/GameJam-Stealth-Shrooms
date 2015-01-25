@@ -40,6 +40,8 @@ public class ParentStealth : MonoBehaviour {
 	}
 
 	void OnSeePlayer(){
-		transform.localScale = Vector3.one * 2;
+		if(Time.timeScale > 0){
+			GameOverScreen.instance.SetUI(true);
+		}
 	}
 }

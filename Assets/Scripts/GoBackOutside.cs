@@ -19,7 +19,7 @@ public class GoBackOutside : MonoBehaviour {
 	void Update () {
 		if(water.held){
 			if(boxCol.bounds.Contains(player.transform.position)){
-				Application.LoadLevel("Outdoors");
+				Application.LoadLevel("Outdoors_Again");
 				PlayerPrefs.SetInt("GotWater", 1);
 			}
 		}
