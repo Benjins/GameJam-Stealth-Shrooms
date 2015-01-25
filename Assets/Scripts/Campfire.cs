@@ -14,11 +14,9 @@ public class Campfire : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(PlayerPrefs.HasKey("GotWater")){
-			if(boxCol.bounds.Contains(player.transform.position)){
-				PlayerPrefs.DeleteKey("GotWater");
-				Debug.Log("You win!");
-			}
+		if(boxCol.bounds.Contains(player.transform.position)){
+			PlayerPrefs.DeleteKey("GotWater");
+			Debug.Log("You win!");
 		}
 	}
 }

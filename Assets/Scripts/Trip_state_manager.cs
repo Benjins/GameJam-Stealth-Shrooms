@@ -36,7 +36,7 @@ public class Trip_state_manager : MonoBehaviour {
 	void OnTriggerEnter ( Collider other ) {
 		if (other.gameObject.tag == "Trip_up") {
 			if(tripLevel < 100) {
-				tripLevel += 25;
+				//tripLevel += 25;
 			}
 			SetWASDMode (fps_control);
 		}
@@ -44,6 +44,8 @@ public class Trip_state_manager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		tripLevel = Mathf.Clamp (tripLevel, 0, 100);
+
 		SetWASDMode (fps_control); 
 
 		//SetHUDSway (mouse_look);
@@ -54,7 +56,9 @@ public class Trip_state_manager : MonoBehaviour {
 	}
 */
 	void SetWASDMode (FPSInputController fps_control) {
-		fps_control.WASDMode = (int)tripLevel / 25;
+		if (fps_control != null) {
+						fps_control.WASDMode = (int)tripLevel / 25;
+				}
 	}
 }
 

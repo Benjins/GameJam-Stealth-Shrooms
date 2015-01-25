@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Water
-  m_Shader: {fileID: 3, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 32, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -33,7 +33,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 0, g: .525490224, b: 1, a: 1}
+        second: {r: 0, g: .525490224, b: 1, a: .219607845}
       data:
         first:
           name: _SpecColor

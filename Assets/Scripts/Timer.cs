@@ -28,6 +28,13 @@ public class Timer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timeLeft -= Time.deltaTime;
+		timeLeft = Mathf.Clamp (timeLeft, 0, Mathf.Infinity);
+
+		if (timeLeft <= 0) {
+			GameOverScreen.instance.SetUI(true);	
+			timeLeft = 120;
+		}
+
 		min = (int)(timeLeft / 60);
 		sec = (int)(timeLeft - (min * 60));
 	}

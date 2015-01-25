@@ -11,8 +11,8 @@ GameObject:
   - 33: {fileID: 3385480}
   - 65: {fileID: 6585480}
   - 23: {fileID: 2385480}
-  - 114: {fileID: 11485480}
   - 114: {fileID: 11426516}
+  - 114: {fileID: 11446096}
   m_Layer: 0
   m_Name: Cube Unicorn
   m_TagString: Untagged
@@ -86,8 +86,10 @@ MonoBehaviour:
   y: 0
   z: 0
   Pulsing: 0
-  Pulse_rate: 0
---- !u!114 &11485480
+  p_x: 0
+  p_y: 0
+  p_z: 0
+--- !u!114 &11446096
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
