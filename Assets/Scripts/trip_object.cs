@@ -17,7 +17,7 @@ public class trip_object : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		manager = FindObjectOfType<Trip_state_manager> ();
-		this.shared_time = 20f;
+		this.shared_time = Random.Range(1,30);
 		this.trip_level = 0f;
 		this.sober_time = shared_time; // sober object to start 
 		this.trip_time = 0;
