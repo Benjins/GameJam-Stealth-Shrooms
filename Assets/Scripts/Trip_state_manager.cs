@@ -3,6 +3,8 @@ using System.Collections;
 
 
 public class Trip_state_manager : MonoBehaviour {
+	public static Trip_state_manager instance;
+
 	public int WASDMode = 0;
 	public float tripLevel = 0;
 //test
@@ -11,6 +13,19 @@ public class Trip_state_manager : MonoBehaviour {
 	public FPSInputController fps_control;
 	public MouseLook mouse_look;
 	public FOV_pulse fov_controller;
+
+	void Awake(){
+		if(instance == null){
+			instance = this;
+		}
+		
+		if(instance != this){
+			Destroy(gameObject);
+		}
+		else{
+			DontDestroyOnLoad(gameObject);
+		}
+	}
 
 	// Use this for initialization
 	void Start () {
