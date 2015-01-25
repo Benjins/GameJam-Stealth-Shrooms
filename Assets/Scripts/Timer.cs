@@ -22,8 +22,6 @@ public class Timer : MonoBehaviour {
 		GUI.skin.label.fontSize = 20;
 		int x = (int)(Screen.width * .87);
 		int y = (int)(Screen.height * .84);
-		print ("width: " + Screen.width);
-		print ("height: " + Screen.height);
 		GUI.Label (new Rect (x, y, 100, 30), min.ToString() +" : " + sec.ToString());
 
 	}
