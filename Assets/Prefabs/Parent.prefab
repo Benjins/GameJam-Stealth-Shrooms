@@ -75,7 +75,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.69755554, y: 1, z: -2.34962177}
+  m_LocalPosition: {x: 89.2506104, y: 1, z: 380.493042}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400000}
@@ -146,7 +146,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_Mesh: {fileID: 4300000, guid: d5e5086b352410c4886a020e15df6f73, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 0c977982ce0bae747905abd336e8d34c, type: 3}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -176,6 +176,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
