@@ -20,7 +20,7 @@ public class TripBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		posn_vector.y = start_y + 295f / 100f * manager.tripLevel;
+		posn_vector.y = start_y + 170f / 100f * manager.tripLevel;
 		transform.position = posn_vector; 
 	}
 }

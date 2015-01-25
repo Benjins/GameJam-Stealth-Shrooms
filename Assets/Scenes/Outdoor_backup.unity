@@ -144,6 +144,8 @@ GameObject:
   - 23: {fileID: 18206398}
   - 114: {fileID: 18206397}
   - 114: {fileID: 18206395}
+  - 114: {fileID: 18206396}
+  - 65: {fileID: 18206400}
   m_Layer: 0
   m_Name: Scary Face Plane
   m_TagString: Untagged
@@ -178,7 +180,26 @@ MonoBehaviour:
   y: 2
   z: 0
   Pulsing: 1
-  Pulse_rate: 40
+  p_x: 0
+  p_y: 0
+  p_z: 0
+--- !u!114 &18206396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 18206393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trip_time: 0
+  sober_time: 0
+  time_in_current_state: 0
+  is_real: 0
+  trip_level: 0
+  manager: {fileID: 0}
 --- !u!114 &18206397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +248,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 18206393}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &18206400
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 18206393}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.0000057, y: 1.52349651e-06, z: 10.0000095}
+  m_Center: {x: -4.76837158e-07, y: 0, z: 2.98023224e-07}
 --- !u!1 &43711203
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +483,7 @@ GameObject:
   - 114: {fileID: 93398619}
   - 114: {fileID: 93398618}
   - 222: {fileID: 93398617}
+  - 114: {fileID: 93398621}
   m_Layer: 5
   m_Name: Trip Bar
   m_TagString: Untagged
@@ -509,7 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -536,6 +570,17 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &93398621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 93398615}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4df87ac60cb024db84cce9a946d0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &96236237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1179,8 @@ GameObject:
   - 23: {fileID: 417214842}
   - 114: {fileID: 417214841}
   - 114: {fileID: 417214845}
+  - 114: {fileID: 417214846}
+  - 65: {fileID: 417214847}
   m_Layer: 0
   m_Name: Sphere_01
   m_TagString: Untagged
@@ -1237,7 +1284,38 @@ MonoBehaviour:
   y: 0
   z: 0
   Pulsing: 0
-  Pulse_rate: 0
+  p_x: 0
+  p_y: 0
+  p_z: 0
+--- !u!114 &417214846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 417214840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trip_time: 0
+  sober_time: 0
+  time_in_current_state: 0
+  is_real: 0
+  trip_level: 0
+  manager: {fileID: 0}
+--- !u!65 &417214847
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 417214840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.00000012, y: 1, z: 1.00000012}
+  m_Center: {x: 5.96046448e-08, y: 0, z: -8.94069672e-08}
 --- !u!1 &444833045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,6 +1673,38 @@ Prefab:
     - target: {fileID: 11400006, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: sensitivityX
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: sensitivityX
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: sensitivityY
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: sensitivityY
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: axes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: maximumY
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: maximumX
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: minimumY
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
@@ -2943,8 +3053,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationZ: 0
   axes: 2
-  sensitivityX: 10
-  sensitivityY: 10
+  sensitivityX: 2
+  sensitivityY: 2
   minimumX: 0
   maximumX: 360
   minimumY: -60
@@ -4542,8 +4652,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1104592818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 200}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 876924651}
   - {fileID: 96236238}
@@ -4551,7 +4661,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 90, y: 100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &1108382850
@@ -8291,7 +8401,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b17a4b2b2578ebf419768569bf22594a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: b17a4b2b2578ebf419768569bf22594a, type: 2}
       propertyPath: orthographic size
@@ -8385,6 +8495,8 @@ GameObject:
   - 23: {fileID: 1945601275}
   - 114: {fileID: 1945601274}
   - 114: {fileID: 1945601272}
+  - 114: {fileID: 1945601273}
+  - 65: {fileID: 1945601278}
   m_Layer: 0
   m_Name: Unicorn plane
   m_TagString: Untagged
@@ -8407,7 +8519,26 @@ MonoBehaviour:
   y: 2
   z: 0
   Pulsing: 0
-  Pulse_rate: 0
+  p_x: 0
+  p_y: 0
+  p_z: 0
+--- !u!114 &1945601273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1945601271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trip_time: 0
+  sober_time: 0
+  time_in_current_state: 0
+  is_real: 0
+  trip_level: 0
+  manager: {fileID: 0}
 --- !u!114 &1945601274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8469,6 +8600,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1518942169}
   m_RootOrder: 1
+--- !u!65 &1945601278
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1945601271}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.74491327e-07, z: 10}
+  m_Center: {x: -4.76837158e-07, y: -4.76837158e-07, z: 4.76837158e-07}
 --- !u!1 &1953035953
 GameObject:
   m_ObjectHideFlags: 0
@@ -8662,6 +8805,7 @@ GameObject:
   - 114: {fileID: 2011885020}
   - 65: {fileID: 2011885025}
   - 114: {fileID: 2011885026}
+  - 114: {fileID: 2011885027}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -8751,13 +8895,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationZ: 0
-  axes: 1
-  sensitivityX: 15
-  sensitivityY: 0
+  axes: 0
+  sensitivityX: 2
+  sensitivityY: 2
   minimumX: -360
   maximumX: 360
-  minimumY: 0
-  maximumY: 0
+  minimumY: -90
+  maximumY: 90
 --- !u!143 &2011885023
 CharacterController:
   m_ObjectHideFlags: 0
@@ -8817,6 +8961,24 @@ MonoBehaviour:
   fps_control: {fileID: 0}
   mouse_look: {fileID: 0}
   fov_controller: {fileID: 0}
+--- !u!114 &2011885027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011885019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d97dd6dc75ddd84b9beb79bd66f4322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: .100000001
+  minStillTime: 5
+  maxStillTime: 15
+  maxTripLowering: 10
+  tripTimeout: 20
+  testTripMeter: 50
+  tripSpeed: 2
 --- !u!1 &2014281511
 GameObject:
   m_ObjectHideFlags: 0
