@@ -4,16 +4,19 @@ using System.Collections;
 public class trip_object : MonoBehaviour {
 	const float visuals_start_level = 15;
 	float shared_time = 20f; 
-	float trip_time;   
-	float sober_time;
-	float time_in_current_state;
+	public float trip_time;   
+	public float sober_time;
+	public float time_in_current_state;
 	public bool is_real;
-	[HideInInspector]
 	public float trip_level;
+	[HideInInspector]
+
 	bool in_trip;
+	public Trip_state_manager manager;
 
 	// Use this for initialization
 	void Start () {
+		manager = FindObjectOfType<Trip_state_manager> ();
 		this.shared_time = 20f;
 		this.trip_level = 0f;
 		this.sober_time = shared_time; // sober object to start 
@@ -27,6 +30,8 @@ public class trip_object : MonoBehaviour {
 	void Update () {
 		// get current trip level
 		// modify, trip time and sober time achordingly
+		trip_level = manager.tripLevel;
+
 		if (this.trip_level >= visuals_start_level && !this.in_trip &&
 		    this.time_in_current_state >= this.sober_time) { 
 			int num = Random.Range(1,100);

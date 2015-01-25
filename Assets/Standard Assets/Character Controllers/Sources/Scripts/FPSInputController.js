@@ -20,7 +20,7 @@ function Update () {
 		directionVector.z = directionVector.z * - 1;
 	} else if (WASDMode == 2) {
 		directionVector.x = directionVector.x * - 1;
-	} else if (WASDMode == 3) {
+	} else if (WASDMode == 3 || WASDMode == 4) {
 		var temp = directionVector.z;
 		directionVector.z = directionVector.x;
 		directionVector.x = temp * -1;
