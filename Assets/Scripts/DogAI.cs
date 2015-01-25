@@ -9,14 +9,20 @@ public class DogAI : MonoBehaviour {
 	int currentPoint = 0;
 
 	GameObject player;
+	BoxCollider boxCol;
 
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player");
+		boxCol = GetComponent<BoxCollider>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if(boxCol.bounds.Contains(player.transform.position)){
+			OnCaughtPlayer();
+		}
+
 		Vector3 goalDir = pathPoints[currentPoint] - transform.position;
 		goalDir.y = 0;
 		if(goalDir.magnitude < 0.5f){
@@ -26,12 +32,6 @@ public class DogAI : MonoBehaviour {
 		Quaternion goalRotation = Quaternion.LookRotation(goalDir);
 		transform.rotation = Quaternion.RotateTowards(transform.rotation, goalRotation, rotationSpeed * Time.deltaTime);
 		transform.position += transform.forward * Time.deltaTime * speed;
-	}
-
-	void OnTriggerEnter(Collider col){
-		if(col.tag == "Player"){
-			OnCaughtPlayer();
-		}
 	}
 
 	void OnCaughtPlayer(){
