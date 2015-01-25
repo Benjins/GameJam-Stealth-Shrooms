@@ -24,6 +24,7 @@ public class trip_object : MonoBehaviour {
 		this.in_trip = false;
 		this.time_in_current_state = 0; // just started, sober
 		this.collider.enabled = this.is_real; // if the obj is real, you can run into it
+		this.renderer.enabled = this.is_real;
 	}
 	
 	// Update is called once per frame
