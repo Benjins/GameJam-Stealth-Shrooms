@@ -3,7 +3,7 @@ using System.Collections;
 
 public class trip_object : MonoBehaviour {
 	const float visuals_start_level = 15;
-	float shared_time = 20f; 
+	float shared_time = Random.Range(8, 30); 
 	public float trip_time;   
 	public float sober_time;
 	public float time_in_current_state;
@@ -17,9 +17,8 @@ public class trip_object : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		manager = FindObjectOfType<Trip_state_manager> ();
-		this.shared_time = Random.Range(1,30);
 		this.trip_level = 0f;
-		this.sober_time = shared_time; // sober object to start 
+		this.sober_time = shared_time - Random.Range(1, 5); // sober object to start 
 		this.trip_time = 0;
 		this.in_trip = false;
 		this.time_in_current_state = 0; // just started, sober
@@ -50,7 +49,7 @@ public class trip_object : MonoBehaviour {
 
 	void stop_trip() {
 		// change time ratio, i
-		this.trip_time = (trip_level / 100) * shared_time;
+		this.trip_time = (trip_level / 100) * shared_time + Random.Range(1, 5);
 		this.sober_time = (1 - (trip_level / 100)) * shared_time;
 		this.time_in_current_state = 0; // new state
 		if (this.is_real) {
