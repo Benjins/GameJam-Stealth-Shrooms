@@ -3,6 +3,21 @@ using System.Collections;
 
 public class Timer : MonoBehaviour {
 
+	public static Timer instance;
+
+	void Awake(){
+		if(instance == null){
+			instance = this;
+		}
+
+		if(instance != this){
+			Destroy(gameObject);
+		}
+		else{
+			DontDestroyOnLoad(gameObject);
+		}
+	}
+
 	public float timeLeft = 300f;
 	public int min, sec;
 	// Use this for initialization
