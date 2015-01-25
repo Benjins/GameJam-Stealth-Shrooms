@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class GameOverScreen : MonoBehaviour {
-	
+
+	public static GameOverScreen instance;
+
 	public Color32 backgroundColor = new Color32(25,25,25,200);
 
 	public Texture parentsLoss;
@@ -11,6 +13,19 @@ public class GameOverScreen : MonoBehaviour {
 	public bool showUI = false;
 	public bool win = false;
 	public Texture2D background;
+
+	void Awake(){
+		if(instance == null){
+			instance = this;
+		}
+
+		if(instance == this){
+			DontDestroyOnLoad(gameObject);
+		}
+		else{
+			Destroy(gameObject);
+		}
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -37,6 +52,18 @@ public class GameOverScreen : MonoBehaviour {
 		showUI = !showUI;
 	}
 
+	public void SetUI(bool newShowUI){
+		showUI = newShowUI;
+		if(showUI){
+			Time.timeScale = 0;
+			Time.fixedDeltaTime = 0;
+		}
+		else{
+			Time.timeScale = 1;
+			Time.fixedDeltaTime = 0.02f;
+		}
+	}
+
 	void OnGUI(){
 		if(showUI){
 			Rect rect = new Rect(Screen.width*0.1f,Screen.height*0.1f,Screen.width*0.8f,Screen.height*0.8f);
@@ -48,12 +75,14 @@ public class GameOverScreen : MonoBehaviour {
 				if(win){
 					GUILayout.Label("You Win!!1!!!1!1!");
 					if(GUILayout.Button("Back to Menu.", GUILayout.Height(200))){
+						SetUI(false);
 						Application.LoadLevel(0);
 					}
 				}
 				else{
 					GUILayout.Label("You have lost...");
 					if(GUILayout.Button("Try Again?", GUILayout.Height(200))){
+						SetUI(false);
 						Application.LoadLevel(Application.loadedLevel);
 					}
 				}
