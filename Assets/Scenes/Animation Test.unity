@@ -2661,7 +2661,6 @@ GameObject:
   - 114: {fileID: 1838865287}
   - 114: {fileID: 1838865286}
   - 114: {fileID: 1838865285}
-  - 65: {fileID: 1838865284}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -2683,19 +2682,6 @@ Transform:
   - {fileID: 608643261}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!65 &1838865284
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 9d4133d5d30b644bd87802a347eaccbe,
-    type: 2}
-  m_PrefabInternal: {fileID: 2038740333}
-  m_GameObject: {fileID: 1838865282}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1838865285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3067,7 +3053,12 @@ Prefab:
       propertyPath: sensitivityY
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6500000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
   m_RootGameObject: {fileID: 1838865282}
   m_IsPrefabParent: 0
