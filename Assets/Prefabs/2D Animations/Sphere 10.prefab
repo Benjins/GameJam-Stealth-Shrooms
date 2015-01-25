@@ -74,7 +74,9 @@ MonoBehaviour:
   y: .699999988
   z: 0
   Pulsing: 0
-  Pulse_rate: 0
+  p_x: 0
+  p_y: 0
+  p_z: 0
 --- !u!114 &11498740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -87,17 +89,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 2800000, guid: f208fb07eaac94a748cfeb6b510cd676, type: 3}
-  - {fileID: 2800000, guid: 48fcd0d6861704e36ba3abeccbc3e275, type: 3}
-  - {fileID: 2800000, guid: 2b52878dbce4e4ccf82a7c52166c1a44, type: 3}
-  - {fileID: 2800000, guid: 9fc99e258207740e689e400ce842cf94, type: 3}
-  - {fileID: 2800000, guid: 1f44ec2b64069464b8e585c7fd425d48, type: 3}
-  - {fileID: 2800000, guid: e1b1497d692594479a39effebc05db53, type: 3}
-  - {fileID: 2800000, guid: e60aa5012bde04e3c8b868229a2a1b80, type: 3}
-  - {fileID: 2800000, guid: 634bc365988c9402bbaad2642ebabd58, type: 3}
-  - {fileID: 2800000, guid: 32bdb5934611e47be866a8d575e68f28, type: 3}
-  - {fileID: 2800000, guid: fdba1c83606c94b4b93bdf8c771334b7, type: 3}
-  - {fileID: 2800000, guid: aff16ce31f86049329b6715cef561d6b, type: 3}
+  - {fileID: 2800000, guid: f7f24dc4da60b4dcaae4255a799fac94, type: 3}
+  - {fileID: 2800000, guid: 2c8a845b4ca6840429e543b1d765f98b, type: 3}
+  - {fileID: 2800000, guid: f6b886116e8f345f7b2add057ec27277, type: 3}
+  - {fileID: 2800000, guid: 5f2a0a739eb4c4b9b96f76aa554ecf18, type: 3}
+  - {fileID: 2800000, guid: 6fcb19042e9524b6faa1feb87459c63d, type: 3}
+  - {fileID: 2800000, guid: 0f595a0a25fa64f81bf7c78337a98355, type: 3}
+  - {fileID: 2800000, guid: 4fd6a857ca464456b9f65465c13dbf32, type: 3}
+  - {fileID: 2800000, guid: 2c201b672989241ca827a9b51b7346b7, type: 3}
+  - {fileID: 2800000, guid: c1a119b67231c48bd880ccacd7518082, type: 3}
   frameRate: 12
 --- !u!135 &13598738
 SphereCollider:

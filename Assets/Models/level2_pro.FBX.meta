@@ -1,0 +1,277 @@
+fileFormatVersion: 2
+guid: 6c1a8575eb63145828f2f6eb173a998c
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Box003
+    100006: Box004
+    100008: Box005
+    100010: Box006
+    100012: Box007
+    100014: Box008
+    100016: Box014
+    100018: Box017
+    100020: Box018
+    100022: Box019
+    100024: Box020
+    100026: Box021
+    100028: Box022
+    100030: Box023
+    100032: Box024
+    100034: Box025
+    100036: Box026
+    100038: Box030
+    100040: cabinets
+    100042: couch
+    100044: counter
+    100046: Cylinder001
+    100048: Cylinder002
+    100050: Cylinder005
+    100052: Cylinder006
+    100054: door003
+    100056: door004
+    100058: door005
+    100060: door1
+    100062: door2
+    100064: fridge
+    100066: island table
+    100068: //RootNode
+    100070: living room table
+    100072: living room table001
+    100074: microwave
+    100076: showerglass
+    100078: tv
+    100080: tv stand
+    100082: tv stand001
+    100084: tv001
+    100086: walls
+    400000: Box001
+    400002: Box002
+    400004: Box003
+    400006: Box004
+    400008: Box005
+    400010: Box006
+    400012: Box007
+    400014: Box008
+    400016: Box014
+    400018: Box017
+    400020: Box018
+    400022: Box019
+    400024: Box020
+    400026: Box021
+    400028: Box022
+    400030: Box023
+    400032: Box024
+    400034: Box025
+    400036: Box026
+    400038: Box030
+    400040: cabinets
+    400042: couch
+    400044: counter
+    400046: Cylinder001
+    400048: Cylinder002
+    400050: Cylinder005
+    400052: Cylinder006
+    400054: door003
+    400056: door004
+    400058: door005
+    400060: door1
+    400062: door2
+    400064: fridge
+    400066: island table
+    400068: //RootNode
+    400070: living room table
+    400072: living room table001
+    400074: microwave
+    400076: showerglass
+    400078: tv
+    400080: tv stand
+    400082: tv stand001
+    400084: tv001
+    400086: walls
+    2300000: Box001
+    2300002: Box002
+    2300004: Box003
+    2300006: Box004
+    2300008: Box005
+    2300010: Box006
+    2300012: Box007
+    2300014: Box008
+    2300016: Box014
+    2300018: Box017
+    2300020: Box018
+    2300022: Box019
+    2300024: Box020
+    2300026: Box021
+    2300028: Box022
+    2300030: Box023
+    2300032: Box024
+    2300034: Box025
+    2300036: Box026
+    2300038: Box030
+    2300040: cabinets
+    2300042: couch
+    2300044: counter
+    2300046: Cylinder001
+    2300048: Cylinder002
+    2300050: Cylinder005
+    2300052: Cylinder006
+    2300054: door003
+    2300056: door004
+    2300058: door005
+    2300060: door1
+    2300062: door2
+    2300064: fridge
+    2300066: island table
+    2300068: living room table
+    2300070: living room table001
+    2300072: microwave
+    2300074: showerglass
+    2300076: tv
+    2300078: tv stand
+    2300080: tv stand001
+    2300082: tv001
+    2300084: walls
+    3300000: Box001
+    3300002: Box002
+    3300004: Box003
+    3300006: Box004
+    3300008: Box005
+    3300010: Box006
+    3300012: Box007
+    3300014: Box008
+    3300016: Box014
+    3300018: Box017
+    3300020: Box018
+    3300022: Box019
+    3300024: Box020
+    3300026: Box021
+    3300028: Box022
+    3300030: Box023
+    3300032: Box024
+    3300034: Box025
+    3300036: Box026
+    3300038: Box030
+    3300040: cabinets
+    3300042: couch
+    3300044: counter
+    3300046: Cylinder001
+    3300048: Cylinder002
+    3300050: Cylinder005
+    3300052: Cylinder006
+    3300054: door003
+    3300056: door004
+    3300058: door005
+    3300060: door1
+    3300062: door2
+    3300064: fridge
+    3300066: island table
+    3300068: living room table
+    3300070: living room table001
+    3300072: microwave
+    3300074: showerglass
+    3300076: tv
+    3300078: tv stand
+    3300080: tv stand001
+    3300082: tv001
+    3300084: walls
+    4300000: walls
+    4300002: showerglass
+    4300004: Box001
+    4300006: Box002
+    4300008: Box003
+    4300010: Box004
+    4300012: Box005
+    4300014: Box006
+    4300016: Box007
+    4300018: Box008
+    4300020: island table
+    4300022: cabinets
+    4300024: fridge
+    4300026: microwave
+    4300028: Box014
+    4300030: Box017
+    4300032: Box018
+    4300034: Box019
+    4300036: Box020
+    4300038: Box021
+    4300040: Box022
+    4300042: Box023
+    4300044: Box024
+    4300046: Box025
+    4300048: Box026
+    4300050: Cylinder001
+    4300052: couch
+    4300054: counter
+    4300056: Box030
+    4300058: tv stand
+    4300060: tv
+    4300062: Cylinder002
+    4300064: Cylinder005
+    4300066: Cylinder006
+    4300068: door2
+    4300070: door1
+    4300072: door003
+    4300074: door004
+    4300076: door005
+    4300078: living room table
+    4300080: tv stand001
+    4300082: tv001
+    4300084: living room table001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

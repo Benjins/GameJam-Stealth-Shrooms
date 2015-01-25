@@ -96,7 +96,9 @@ MonoBehaviour:
   y: .699999988
   z: 0
   Pulsing: 0
-  Pulse_rate: 0
+  p_x: 0
+  p_y: 0
+  p_z: 0
 --- !u!135 &13558774
 SphereCollider:
   m_ObjectHideFlags: 1
