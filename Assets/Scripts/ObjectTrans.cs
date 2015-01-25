@@ -6,13 +6,12 @@ public class ObjectTrans : MonoBehaviour {
 	public float x, y, z;
 	
 	public bool Pulsing = false;
-	public float Pulse_rate;
+	public float p_x, p_y, p_z;
 
 	float time = 0;
 	
 	void Pulse() {
-		float var = Mathf.Sin (time) * Pulse_rate/100;
-		transform.localScale += new Vector3 (var, var, var);
+		transform.localScale += new Vector3 (Mathf.Sin (time) * p_x/100, Mathf.Sin (time) * p_y/100, Mathf.Sin (time) * p_z/100);
 	}
 	
 	

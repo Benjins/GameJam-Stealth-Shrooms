@@ -46,7 +46,7 @@ public class ParentPathing : MonoBehaviour {
 	}
 
 	public void GetRandomGoalNode(){
-		int index = Random.Range(0,nodes.Length);
+		int index = Random.Range(0,nodes.Length-1);
 		if(nodes[index] == currentNode){
 			index = (index + 1) % nodes.Length;
 		}
