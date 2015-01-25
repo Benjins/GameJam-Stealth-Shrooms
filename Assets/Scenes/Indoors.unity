@@ -1467,6 +1467,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &210669252
 Prefab:
   m_ObjectHideFlags: 0
@@ -1746,6 +1747,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &251500756
 Renderer:
   m_ObjectHideFlags: 0
@@ -2715,6 +2717,7 @@ GameObject:
   - 33: {fileID: 359192268}
   - 23: {fileID: 359192267}
   - 65: {fileID: 359192266}
+  - 114: {fileID: 359192269}
   m_Layer: 0
   m_Name: Box032
   m_TagString: Untagged
@@ -2776,6 +2779,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 706163601}
   m_GameObject: {fileID: 359192264}
   m_Mesh: {fileID: 4300062, guid: 9a3430baf1f08f7469d8e100a725eafb, type: 3}
+--- !u!114 &359192269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 359192264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trip_time: 0
+  sober_time: 0
+  time_in_current_state: 0
+  is_real: 1
+  trip_level: 0
+  manager: {fileID: 0}
 --- !u!1 &373289653
 GameObject:
   m_ObjectHideFlags: 0
@@ -3146,6 +3166,7 @@ GameObject:
   - 33: {fileID: 417185999}
   - 23: {fileID: 417185998}
   - 65: {fileID: 417185997}
+  - 114: {fileID: 417186000}
   m_Layer: 0
   m_Name: Box010
   m_TagString: Untagged
@@ -3207,6 +3228,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 706163601}
   m_GameObject: {fileID: 417185995}
   m_Mesh: {fileID: 4300018, guid: 9a3430baf1f08f7469d8e100a725eafb, type: 3}
+--- !u!114 &417186000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 417185995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trip_time: 0
+  sober_time: 0
+  time_in_current_state: 0
+  is_real: 1
+  trip_level: 0
+  manager: {fileID: 0}
 --- !u!1 &420164528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3349,7 @@ GameObject:
   - 114: {fileID: 435722507}
   - 114: {fileID: 435722506}
   - 65: {fileID: 435722505}
+  - 114: {fileID: 435722510}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Player
@@ -3449,6 +3488,23 @@ CharacterController:
   m_SkinWidth: .0500000007
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &435722510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 435722503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e985b5a05bd3846aa85f79fce41d5810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WASDMode: 0
+  tripLevel: 70
+  rot_z: 0
+  fps_control: {fileID: 0}
+  mouse_look: {fileID: 0}
+  fov_controller: {fileID: 0}
 --- !u!1001 &441150227
 Prefab:
   m_ObjectHideFlags: 0
@@ -5852,7 +5908,7 @@ Transform:
   m_Children:
   - {fileID: 1502445797}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &844601354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6349,6 +6405,7 @@ GameObject:
   - 33: {fileID: 894768356}
   - 23: {fileID: 894768355}
   - 65: {fileID: 894768354}
+  - 114: {fileID: 894768357}
   m_Layer: 0
   m_Name: Box022
   m_TagString: Untagged
@@ -6410,6 +6467,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 706163601}
   m_GameObject: {fileID: 894768352}
   m_Mesh: {fileID: 4300042, guid: 9a3430baf1f08f7469d8e100a725eafb, type: 3}
+--- !u!114 &894768357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 894768352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trip_time: 0
+  sober_time: 0
+  time_in_current_state: 0
+  is_real: 1
+  trip_level: 0
+  manager: {fileID: 0}
 --- !u!1 &914931865
 GameObject:
   m_ObjectHideFlags: 0
@@ -6811,7 +6885,7 @@ Transform:
   - {fileID: 661875869}
   - {fileID: 1177940247}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!1001 &970669845
 Prefab:
   m_ObjectHideFlags: 0
@@ -6947,7 +7021,7 @@ Transform:
   m_Children:
   - {fileID: 427794623}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &994222924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10719,6 +10793,7 @@ GameObject:
   - 33: {fileID: 1523335292}
   - 23: {fileID: 1523335291}
   - 65: {fileID: 1523335290}
+  - 114: {fileID: 1523335293}
   m_Layer: 0
   m_Name: Box026
   m_TagString: Untagged
@@ -10780,6 +10855,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 706163601}
   m_GameObject: {fileID: 1523335288}
   m_Mesh: {fileID: 4300050, guid: 9a3430baf1f08f7469d8e100a725eafb, type: 3}
+--- !u!114 &1523335293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1523335288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trip_time: 0
+  sober_time: 0
+  time_in_current_state: 0
+  is_real: 1
+  trip_level: 0
+  manager: {fileID: 0}
 --- !u!1 &1530036959
 GameObject:
   m_ObjectHideFlags: 0
@@ -11156,6 +11248,7 @@ GameObject:
   - 33: {fileID: 1645445799}
   - 23: {fileID: 1645445798}
   - 65: {fileID: 1645445797}
+  - 114: {fileID: 1645445800}
   m_Layer: 0
   m_Name: Box001
   m_TagString: Untagged
@@ -11217,6 +11310,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 706163601}
   m_GameObject: {fileID: 1645445795}
   m_Mesh: {fileID: 4300000, guid: 9a3430baf1f08f7469d8e100a725eafb, type: 3}
+--- !u!114 &1645445800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645445795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trip_time: 0
+  sober_time: 0
+  time_in_current_state: 0
+  is_real: 1
+  trip_level: 0
+  manager: {fileID: 0}
 --- !u!1001 &1703394684
 Prefab:
   m_ObjectHideFlags: 0
@@ -12008,6 +12118,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1793306470
 Renderer:
   m_ObjectHideFlags: 0
@@ -14365,6 +14476,7 @@ GameObject:
   - 33: {fileID: 2141284536}
   - 23: {fileID: 2141284535}
   - 65: {fileID: 2141284534}
+  - 114: {fileID: 2141284537}
   m_Layer: 0
   m_Name: Box020
   m_TagString: Untagged
@@ -14426,3 +14538,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 706163601}
   m_GameObject: {fileID: 2141284532}
   m_Mesh: {fileID: 4300038, guid: 9a3430baf1f08f7469d8e100a725eafb, type: 3}
+--- !u!114 &2141284537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141284532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb226ecf11646bb898f24ac020ac88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trip_time: 0
+  sober_time: 0
+  time_in_current_state: 0
+  is_real: 1
+  trip_level: 0
+  manager: {fileID: 0}
