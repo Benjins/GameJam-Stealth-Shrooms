@@ -10,6 +10,9 @@ public class PlayerStillness : MonoBehaviour {
 	public float tripTimeout = 20.0f;
 
 	public float testTripMeter = 50.0f;
+	public float tripSpeed = 0.5f;
+
+	Trip_state_manager tripManager;
 
 	bool timedOut = false;
 	Vector3 previousPosition;
@@ -19,9 +22,11 @@ public class PlayerStillness : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		previousPosition = transform.position;
+		tripManager = FindObjectOfType<Trip_state_manager>();
 	}
 
 	void LateUpdate(){
+		tripManager.tripLevel = Mathf.Clamp(tripManager.tripLevel+ Time.deltaTime * tripSpeed, 0, 100);
 		if(timedOut){
 			return;
 		}
@@ -33,7 +38,9 @@ public class PlayerStillness : MonoBehaviour {
 					Invoke("ResetTimeout", tripTimeout);
 				}
 				else{
-					testTripMeter -= maxTripLowering * (Time.deltaTime/(maxStillTime - minStillTime));
+					float timePercent = (Time.deltaTime/(maxStillTime - minStillTime));
+					tripManager.tripLevel = Mathf.Clamp(tripManager.tripLevel - Time.deltaTime  * tripSpeed, 0, 100);
+					tripManager.tripLevel = Mathf.Clamp(tripManager.tripLevel - maxTripLowering * timePercent, 0, 100);
 				}
 
 			}
