@@ -3,8 +3,7 @@ using System.Collections;
 
 public class TripVisualsUI : MonoBehaviour {
 
-	public Texture[] visuals;
-	public GameObject visualPrefab;
+	public GameObject[] visuals;
 
 	public float tripTimeMin = 10.0f;
 	public float tripTimeMax = 30.0f;
@@ -44,9 +43,8 @@ public class TripVisualsUI : MonoBehaviour {
 
 	void AddTripVisual(){
 		Vector3 offset = new Vector3(Random.Range(-3.0f,3.0f), Random.Range(-2.0f,2.0f), 0);
-		GameObject visual = Instantiate(visualPrefab, transform.position + transform.forward + offset, Quaternion.identity) as GameObject;
+		GameObject visual = Instantiate(visuals[Random.Range(0, visuals.Length)], transform.position + transform.forward + offset, Quaternion.identity) as GameObject;
 		visual.transform.localScale = Vector3.one * Random.Range(minTripSize, maxTripSize);
-		visual.renderer.material.mainTexture = visuals[Random.Range(0, visuals.Length)];
 		visual.transform.parent = transform;
 	}
 }
