@@ -18,7 +18,7 @@ public class trip_object : MonoBehaviour {
 	void Start () {
 		manager = FindObjectOfType<Trip_state_manager> ();
 		this.trip_level = 0f;
-		this.sober_time = shared_time - Random.Range(1, 5); // sober object to start 
+		this.sober_time = shared_time; //- Random.Range(1, 5); // sober object to start 
 		this.trip_time = 0;
 		this.in_trip = false;
 		this.time_in_current_state = 0; // just started, sober
@@ -49,8 +49,8 @@ public class trip_object : MonoBehaviour {
 
 	void stop_trip() {
 		// change time ratio, i
-		this.trip_time = (trip_level / 100) * shared_time + Random.Range(1, 5);
-		this.sober_time = (1 - (trip_level / 100)) * shared_time;
+		this.trip_time = (trip_level / 20) * Random.Range(1, 5);
+		this.sober_time = Random.Range (2, 12);//(1 - (trip_level / 100)) * shared_time;
 		this.time_in_current_state = 0; // new state
 		if (this.is_real) {
 			this.renderer.enabled = true; // you can see the real object again
