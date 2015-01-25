@@ -7,16 +7,21 @@ public class ObjectTrans : MonoBehaviour {
 	
 	public bool Pulsing = false;
 	public float Pulse_rate;
+
+	float time = 0;
 	
 	void Pulse() {
-		float var = Mathf.Sin (Time.time) * Pulse_rate/100;
+		float var = Mathf.Sin (time) * Pulse_rate/100;
 		transform.localScale += new Vector3 (var, var, var);
 	}
 	
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Rotate(new Vector3 (x, y, z));
+		time += Time.deltaTime;
+		if(Time.timeScale > 0){
+			transform.Rotate(new Vector3 (x, y, z));
+		}
 		if (Pulsing == true) {
 			Pulse ();
 		}
