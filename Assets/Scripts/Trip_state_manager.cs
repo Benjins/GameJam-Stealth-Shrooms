@@ -18,15 +18,18 @@ public class Trip_state_manager : MonoBehaviour {
 		//mouse_look = FindObjectOfType<MouseLook> ();
 	}
 
-	void OnTriggerEnter( Collider other ) {
+	void OnTriggerEnter ( Collider other ) {
 		if (other.gameObject.tag == "Trip_up") {
-			if(tripLevel < 100) tripLevel += 25;
+			if(tripLevel < 100) {
+				tripLevel += 25;
+			}
+			SetWASDMode (fps_control);
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		SetWASDMode (fps_control);
+		SetWASDMode (fps_control); 
 
 		//SetHUDSway (mouse_look);
 	}
