@@ -5,12 +5,12 @@ public class GameOverScreen : MonoBehaviour {
 	
 	public Color32 backgroundColor = new Color32(25,25,25,200);
 
+	public Texture parentsLoss;
+	public Texture friendsDieLoss;
+
 	public bool showUI = false;
-	Texture2D background;
-
-	void Awake(){
-
-	}
+	public bool win = false;
+	public Texture2D background;
 
 	// Use this for initialization
 	void Start () {
@@ -45,9 +45,17 @@ public class GameOverScreen : MonoBehaviour {
 			{
 				GUI.skin.label.fontSize = 48;
 				GUI.skin.button.fontSize = 48;
-				GUILayout.Label("You have lost...");
-				if(GUILayout.Button("Try Again?", GUILayout.Height(200))){
-					Application.LoadLevel(Application.loadedLevel);
+				if(win){
+					GUILayout.Label("You Win!!1!!!1!1!");
+					if(GUILayout.Button("Back to Menu.", GUILayout.Height(200))){
+						Application.LoadLevel(0);
+					}
+				}
+				else{
+					GUILayout.Label("You have lost...");
+					if(GUILayout.Button("Try Again?", GUILayout.Height(200))){
+						Application.LoadLevel(Application.loadedLevel);
+					}
 				}
 			}
 			GUILayout.EndArea();
